@@ -1,5 +1,8 @@
 const path = require('path');
 const HtmlWebPackPlugin = require("html-webpack-plugin");
+const FaviconsWebPackPlugin = require("favicons-webpack-plugin")
+
+//const isDevelopment = process.env.NODE_ENV === 'development'
 
 module.exports = {
     entry: './src/index.js',
@@ -8,7 +11,7 @@ module.exports = {
         filename: 'bundle.js'
     },
     resolve: {
-        extensions: ['.js', '.jsx']
+        extensions: ['.js', '.jsx', '.scss']
     },
     module: {
         rules: [
@@ -24,6 +27,14 @@ module.exports = {
                 use: [{
                     loader: "html-loader"
                 }]
+            },
+            {
+                test: /\.s[ac]ss$/i,
+                use: [
+                    'style-loader',
+                    'css-loader',
+                    'sass-loader',
+                ],
             }
         ]
     },
@@ -31,6 +42,7 @@ module.exports = {
         new HtmlWebPackPlugin({
             template: "./public/index.html",
             filename: "./index.html"
-          }),
+        }),
+        new FaviconsWebPackPlugin('./public/icon.png')
     ]
 }

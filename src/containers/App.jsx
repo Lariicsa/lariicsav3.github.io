@@ -5,16 +5,24 @@ import Info from '../components/Info'
 import Card from '../components/Card'
 import Skills from '../components/Skills'
 import Footer from '../components/Footer'
+import useGetData from '../hooks/useGetData'
 
 const App = () => {
-    return (
+    const data = useGetData()
+    console.log(data);
+    
+    return data.length === 0 ? <strong>loading ..</strong> : (
         <Main>
-            <Navbar></Navbar>
+            <Navbar
+            avatar={data.avatar}
+            name= {data.name}
+            social={data.social}
+            ></Navbar>
             <Info></Info>
             <Card>
-                <Skills></Skills>
+                <Skills data={data.skills}></Skills>
             </Card>
-            {/* <Footer></Footer> */}
+            <Footer social={data.social}></Footer>
         </Main>
     )
 }
