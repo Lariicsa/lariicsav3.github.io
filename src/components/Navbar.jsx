@@ -7,7 +7,7 @@ const Navbar = () => (
                 <a href="/" className="header-pic"></a>
             </div>
             <ul className="menu">
-                <li><a href="" className=""></a></li>
+                <li><a href="/" className="">Navbar</a></li>
             </ul>
             <div className="header-mobile-toggle">
                 <span></span>
@@ -18,7 +18,7 @@ const Navbar = () => (
 
         <ul className="header-mobile-menu">
 
-            <li><a href="" className=""></a></li>
+            <li><a href="/" className=""></a></li>
 
         </ul>
     </div>

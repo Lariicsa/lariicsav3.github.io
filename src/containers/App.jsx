@@ -14,7 +14,7 @@ const App = () => {
             <Card>
                 <Skills></Skills>
             </Card>
-            <Footer></Footer>
+            {/* <Footer></Footer> */}
         </Main>
     )
 }
