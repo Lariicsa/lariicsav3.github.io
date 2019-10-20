@@ -11,17 +11,17 @@ import useGetData from '../hooks/useGetData'
 const App = () => {
     const data = useGetData()
     console.log(data);
-    
+
     return data.length === 0 ? <strong>loading ..</strong> : (
         <Main>
             <Navbar
-            avatar={data.image}
+                avatar={data.image}
             ></Navbar>
             <Info></Info>
             <Card
-            data={data.jobs}
+                data={data.jobs}
             >
-                <Skills></Skills>
+                {/* <Skills data={data.jobs}></Skills> */}
             </Card>
             <Footer social={data.social}></Footer>
         </Main>
