@@ -7,7 +7,11 @@ const Card = props => (
             .reverse()
             .map((job, i) => (
                 <div key={i} className="card">
-                    <span>{i}</span>
+                    {job.dateEnd ?
+                        <span>{job.dateStart} - {job.dateEnd}</span> 
+                        :
+                        <span>Currently</span> 
+                    }
                     <h2>{job.position}</h2>
                     <a href={job.jobUrl} target="_blank">{job.title}</a>
                     <p>{job.jobExtract}</p>
