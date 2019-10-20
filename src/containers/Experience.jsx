@@ -7,21 +7,19 @@ import Footer from '../components/Footer'
 import useGetData from '../hooks/useGetData'
 
 
-const App = () => {
+const Experience = () => {
     const data = useGetData()
     console.log(data);
     return data.length === 0 ? <strong>loading ..</strong> : (
         <div className="space">
             <Main>
-                <Navbar
-                    avatar={data.image}
-                ></Navbar>
-                <Info></Info>
+                <Navbar></Navbar>
+                <Info title={'Experience'}></Info>
                 <div className="row timeline animated">
                     <div className="line"></div>
                     <div className="cards animated">
                         <Card
-                            data={data.jobs.slice(4,6)}
+                            data={data.jobs}
                         >
                         </Card>
                     </div>
@@ -32,4 +30,4 @@ const App = () => {
     )
 }
 
-export default App
+export default Experience

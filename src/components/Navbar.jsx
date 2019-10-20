@@ -1,14 +1,15 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 
 const Navbar = () => (
     <div className="header-wrapper">
         <div className="header">
             <div className="row md">
-                <a href="/" className="header-pic"></a>
+                <NavLink to={'/'} className="header-pic"></NavLink>
             </div>
             <ul className="menu">
-                <li><a href="/">Home</a></li>
-                <li><a href="/experience">Experience</a></li>
+                <li><NavLink exact activeClassName="here" to={'/'}>Home</NavLink></li>
+                <li><NavLink activeClassName="here" to={'/experience'}>Experience</NavLink></li>
             </ul>
             <div className="header-mobile-toggle">
                 <span></span>
@@ -18,8 +19,8 @@ const Navbar = () => (
         </div>
 
         <ul className="header-mobile-menu">
-            <li><a href="/" >Home</a></li>
-            <li><a href="/experience">Experience</a></li>
+            <li><NavLink to={'/'}>Home</NavLink></li>
+            <li><NavLink to={'/experience'} activeClassName="here">Experience</NavLink></li>
         </ul>
     </div>
 )
