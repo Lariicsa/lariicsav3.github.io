@@ -1,13 +1,14 @@
 import React from 'react'
 
-const Navbar = ({ avatar, name }) => (
+const Navbar = () => (
     <div className="header-wrapper">
         <div className="header">
             <div className="row md">
-                <a href="/" className="header-pic"><img src={avatar} alt={name} /></a>
+                <a href="/" className="header-pic"></a>
             </div>
             <ul className="menu">
-                <li><a href="/" className="">{name}</a></li>
+                <li><a href="/">Home</a></li>
+                <li><a href="/experience">Experience</a></li>
             </ul>
             <div className="header-mobile-toggle">
                 <span></span>
@@ -17,9 +18,8 @@ const Navbar = ({ avatar, name }) => (
         </div>
 
         <ul className="header-mobile-menu">
-
-            <li><a href="/" className=""></a></li>
-
+            <li><a href="/" >Home</a></li>
+            <li><a href="/experience">Experience</a></li>
         </ul>
     </div>
 )

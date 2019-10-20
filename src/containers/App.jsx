@@ -7,6 +7,7 @@ import Skills from '../components/Skills'
 import Footer from '../components/Footer'
 import useGetData from '../hooks/useGetData'
 
+
 const App = () => {
     const data = useGetData()
     console.log(data);
@@ -14,13 +15,13 @@ const App = () => {
     return data.length === 0 ? <strong>loading ..</strong> : (
         <Main>
             <Navbar
-            avatar={data.avatar}
-            name= {data.name}
-            social={data.social}
+            avatar={data.image}
             ></Navbar>
             <Info></Info>
-            <Card>
-                <Skills data={data.skills}></Skills>
+            <Card
+            data={data.jobs}
+            >
+                <Skills></Skills>
             </Card>
             <Footer social={data.social}></Footer>
         </Main>

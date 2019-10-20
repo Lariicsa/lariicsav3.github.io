@@ -1,3 +1,10 @@
 @charset "utf-8";
 @import "normalize.scss";
 @import "global.scss";
+
+//components
+@import "components/cards.scss";
+@import "components/footer.scss";
+@import "components/latests.scss";
+@import "components/navbar.scss";
+@import "components/tags.scss";
