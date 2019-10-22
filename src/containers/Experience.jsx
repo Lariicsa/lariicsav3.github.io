@@ -14,7 +14,16 @@ const Experience = () => {
         <div className="space">
             <Main>
                 <Navbar></Navbar>
-                <Info title={'Experience'}></Info>
+                <Info>
+                    <>
+                        <div className="row">
+                            <h2>Experience</h2>
+                        </div>
+                        <p className="cool">
+                            I’m have UI Design background and strong skills implementing HTML & CSS in different environments.
+                        </p>
+                    </>
+                </Info>
                 <div className="row timeline animated">
                     <div className="line"></div>
                     <div className="cards animated">
