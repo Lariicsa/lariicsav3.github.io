@@ -17,7 +17,7 @@ deploy:
   github-token: $GIT_TOKEN
   local-dir: dist/
   target-branch: master
-  commit_message: "LARA@gremlim - Deploy release ${TRAVIS_TAG}"
-  fqdn: cv.lara.dev
+  commit_message: "LARA me - Deploy release ${TRAVIS_TAG}"
+  fqdn: lariicsav3.github.io
   on:
     branch: develop
