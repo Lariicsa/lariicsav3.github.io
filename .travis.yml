@@ -1,24 +1,23 @@
 language: node_js
 cache:
   directories:
-    - ~!@/.npm
-
+    - ~/.npm
 node_js:
   - '9'
-
 git:
   depth: 3
 script:
   - yarn build
-  - echo 'lariicsa.com' > public/CNAME
-
+  - echo 'cv.lara.dev' > public/CNAME
 deploy:
+  name: lariicsa@gremlim
   provider: pages
   skip-cleanup: true
   keep-history: true
   github-token: $GIT_TOKEN
   local-dir: dist/
   target-branch: master
-  commit_message: "Lara Deploy release ${TRAVIS_TAG}"
+  commit_message: "LARA@gremlim - Deploy release ${TRAVIS_TAG}"
+  fqdn: cv.lara.dev
   on:
     branch: develop
