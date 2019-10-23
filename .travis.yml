@@ -8,7 +8,6 @@ node_js:
 
 git:
   depth: 3
-
 script:
   - yarn build
   - echo 'lariicsa.com' > public/CNAME
@@ -20,6 +19,6 @@ deploy:
   github-token: $GIT_TOKEN
   local-dir: dist/
   target-branch: master
-  commit_message: "Deploy release ${TRAVIS_TAG}"
+  commit_message: "Lara Deploy release ${TRAVIS_TAG}"
   on:
     branch: develop
